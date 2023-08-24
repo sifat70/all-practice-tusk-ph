@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discount Calculator</title>
+</head>
+<body>
+    <h1>Discount Calculator</h1>
+    <form id="discountForm">
+        <label for="originalPrice">Original Price:</label>
+        <input type="number" id="originalPrice" step="0.01" required><br>
+        
+        <label for="discountPercentage">Discount Percentage:</label>
+        <input type="number" id="discountPercentage" step="0.01" required><br>
+        
+        <button type="button" id="calculateButton">Calculate Discount</button>
+    </form>
+    
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", function() {
+            const originalPrice = parseFloat(document.getElementById("originalPrice").value);
+            const discountPercentage = parseFloat(document.getElementById("discountPercentage").value);
+            
+            if (isNaN(originalPrice) || isNaN(discountPercentage)) {
+                document.getElementById("result").textContent = "Invalid input. Please enter valid numbers.";
+            } else {
+                const discountedPrice = (originalPrice * (100 - discountPercentage)) / 100;
+                document.getElementById("result").textContent = `Discounted price: $${discountedPrice.toFixed(2)}`;
+            }
+        });
+    </script>
+</body>
+</html>

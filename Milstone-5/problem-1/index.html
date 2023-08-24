@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discond</title>
+</head>
+
+<body>
+    <input id="total-taka" placeholder="input moaney" type="text">
+    <button id="btn-price">Price</button>
+    <p>Please Pay: <span id="discund-tk">00</span></p>
+
+
+    <script>
+        document.getElementById('btn-price').addEventListener('click', function () {
+
+            const totalTaka = document.getElementById('total-taka');
+            const totalTakaValueString = totalTaka.value;
+            const totalTakaValue = parseFloat(totalTakaValueString);
+            totalTaka.value = totalTakaValue;
+
+
+            const discondTaka = document.getElementById('discund-tk');
+            discondTaka.innerText = totalTakaValue * 0.7;
+
+
+
+            // discondTaka-20;
+
+
+            
+
+
+
+
+            totalTaka.value = '';
+
+            // (itemPrice * discountPercentage) / 100;
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+/*header style*/
+header{
+	background: rgba(255, 144, 14, 0.10);
+	padding: 50px 240px;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav > ul {
+	display: flex;
+	gap: 30px;
+}
+nav li {
+	list-style: none;
+}
+nav li > a{
+	text-decoration: none;
+	color: #424242;
+}
+.comphany-name{
+	color: #131313);
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.nav-title{
+	color: #424242;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px; /* 144.444% */
+}
+.banner{
+	margin-top: 100px;
+}
+.banner-text{
+	text-align: center;
+}
+.banner-title{
+	color: #131313;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+.banner-description{
+	color: #727272;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+	margin-bottom: 20px;
+}
+.btn-primary{
+	border-radius: 8px;
+    background: #FF900E;
+    width: 180px;
+	height: 64px;
+	flex-shrink: 0;
+	color: #FFFFFF;
+	border: none;
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.banner-img img{
+	width: 100%;
+}
+
+
+.teams-container{
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+}
+.teams-img {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+..teams-img img{
+	width: 100%;
+}
+.teams-content{
+	padding-left: 70px;
+}
+.teams-description{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.quick-list{
+	color: #727272;
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.of-our{
+	color: #131313;
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.teams-fetures{
+	color: #FF900E;
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+
+
+@media screen and (max-width: 576px) {
+	nav ,
+	.teams-container{
+		flex-direction: column;
+	}
+	header {
+        padding: 20px;
+    }
+    nav > ul {
+	flex-direction: column;
+	gap: 5px;
+    }
+    .comphany-name,
+    .banner-title,
+    .teams-title,{
+	font-size: 30px;
+    }
+	.teams-img{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.teams-content{
+		padding: 10px;
+	}
+	.teams-content .teams-title {
+		font-size: 10px;
+	}
+	.teams-description{
+		font-size: 10px;
+	}
+}

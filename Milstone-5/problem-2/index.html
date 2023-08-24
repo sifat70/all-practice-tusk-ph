@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem-2</title>
+</head>
+<body>
+    <input type="text" name="" placeholder="input amound" id="amound-field">
+    <input type="text" placeholder="cupon name">
+    <button id="apply-btn">apply</button>
+    <p class="">please pay: <span id="total-taka">00</span></p>
+
+
+
+    <script>
+        document.getElementById('apply-btn').addEventListener('click', function(){
+            const amoundField = document.getElementById('amound-field');
+            const amoundFieldValueString = amoundField.value;
+            const amoundFieldValue = parseInt(amoundFieldValueString);
+            amoundField.value = amoundFieldValue;
+
+            
+            
+            const totalTaka = document.getElementById('total-taka');
+            totalTaka.innerText = amoundFieldValue;
+
+
+
+            const cuponDiscound = document.getElementById('apply-btn');
+            const name = 'sifat';
+            cuponDiscound.value = name;
+            const cupon = cuponDiscound.value;
+            console.log(cupon);
+
+            if(cuponDiscound === 'sifat'){
+                totalTaka.innerText = amoundFieldValue * 0.7;
+                console.log(totalTaka)
+            }else{      
+                
+                alert('input valid number');
+            }
+            
+            
+        })
+    </script>
+    <!-- <script src="./js/index.js"></script> -->
+</body>
+</html>
